@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A98CA33-FEDD-4BB1-A78B-946DF33226AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SSLMaker</RootNamespace>
+    <AssemblyName>SSLMaker</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="glade-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="images\padlockandkeys16x16.jpg" />
+    <EmbeddedResource Include="images\ssl_cert.jpg" />
+    <EmbeddedResource Include="images\userdetails.jpg" />
+    <EmbeddedResource Include="images\ssl_cert55x68.png" />
+    <EmbeddedResource Include="images\padlockandkeys80x80.png" />
+    <EmbeddedResource Include="images\padlockandkeys16x16.png" />
+    <EmbeddedResource Include="images\padlockandkeys80x80rev.png" />
+    <EmbeddedResource Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="gtk-gui\MainWindow.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="SSLDetails.cs" />
+    <Compile Include="gtk-gui\SSLMaker.SSLDetails.cs" />
+    <Compile Include="KeyCreate.cs" />
+    <Compile Include="gtk-gui\SSLMaker.KeyCreate.cs" />
+    <Compile Include="UserDetails.cs" />
+    <Compile Include="gtk-gui\SSLMaker.UserDetails.cs" />
+    <Compile Include="Preferences.cs" />
+    <Compile Include="gtk-gui\SSLMaker.Preferences.cs" />
+    <Compile Include="dpcTest.cs" />
+    <Compile Include="gtk-gui\SSLMaker.dpcTest.cs" />
+    <Compile Include="CertGenerator.cs" />
+    <Compile Include="gtk-gui\SSLMaker.CertGenerator.cs" />
+    <Compile Include="About.cs" />
+    <Compile Include="gtk-gui\SSLMaker.About.cs" />
+    <Compile Include="KeyStripPass.cs" />
+    <Compile Include="gtk-gui\SSLMaker.KeyStripPass.cs" />
+    <Compile Include="directoryTools.cs" />
+    <Compile Include="gtk-gui\SSLMaker.directoryTools.cs" />
+    <Compile Include="fileBrowser.cs" />
+    <Compile Include="gtk-gui\SSLMaker.fileBrowser.cs" />
+    <Compile Include="CheckDisk.cs" />
+    <Compile Include="gtk-gui\SSLMaker.CheckDisk.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,8 @@
+GB
+North Yorkshire
+Scarborough
+Claymarda
+IT Dept
+david@localhost
+~/Projects/SSLMaker/CertFile/
+~/Projects/SSLMaker/KeyFile/
